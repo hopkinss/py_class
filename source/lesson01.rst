@@ -209,21 +209,19 @@ Examples of calling string functions in Python
     y=my_string[-4:] # ->test
     y=my_string[::2] # -> ti sol  et
 
-.. note::
-
-    Arrays are 0 based everhwere but SAS
 
 
 Brief introduction to collections
 --------------------------------------------
 In order to make program flow more meaningful, we will briefly introduce collections in Python. There are others, but
-these three data structures provide enough functionality for the foundation.
+these three sequence data structures provide enough functionality for the foundation.
 
 Lists
 +++++++++++++
 A list is a mutable zero-origin sequence of values of any type, enclosed by [] and delimted by commas.
 
 .. code-block:: Python
+
     my_list=[33,'Bob', (1,2,)]
 
 Tuple
@@ -231,6 +229,7 @@ Tuple
 A tuple is an imutable zero-origin sequence of values of any type, enclosed by () and delimted by commas
 
 .. code-block:: Python
+
     my_tuple=(33,'Bob', (1,2,))
 
 Dictionary
@@ -239,6 +238,7 @@ A dictionary is collection of key:value pairs, not necessarily in order, and not
 key and value elements are delimited by colors, and pairs are delimited by commas
 
 .. code-block:: Python
+
     my_dict={'bob':1, 'jim':2, \
              'steve':3}
 
@@ -246,18 +246,122 @@ key and value elements are delimited by colors, and pairs are delimited by comma
 
 Program flow control
 -----------------------------
+Python, like SAS, has a concept of "truthy" in that an expression evaluates to True if not None, False, 0 (int,
+float, or complex), or an empty sequence (e.g. my_empty_list=[] is Falsey)
+
+
+IF, ELIF, ELSE
+++++++++++++++++++
+You already know this one, but pay attention to the indentation!
+
+
+.. code-block:: Python
+
+    if my_int == 1:
+        [ statements indented with the IF block]
+    elif my_int == 2:
+        [statements]
+    else:
+        [statements]
+
+FOR
+++++++++++++++++++++++++++++++++
+The for statement in Python supports repeated execution of a statement or block of statements that is controlled by an
+iterable expression. The FOR statement will execute over each element in the collection implicitly.
+
+    .. note::
+
+        More on what makes someting interable later, for now, think any collection (string, list, tuple, dict) is iterable
+
+.. code-block:: Python
+
+    my_list=["this", "is","really", "only", "a", "test"]
+
+    # for each element in my_list
+    for i in my_list:
+        print("i={}".format(i))
+
+    # enumerate create an int that captures the iteration, j captures the nth element of my_list.
+    # break exits a loop
+    for i,j in enumerate(my_list):
+        if i != 3:
+            print("i={} j={}".format(str(i),j))
+        else:
+            print("i'm leaving")
+            break
+
+    # the range function returns a zero-based integer sequence. It optionally accepts (start,end) but only requires end
+    for i in range(10):
+        print(i)
+
+     # Continue loop but omit an interation
+    for i,j in enumerate(my_list):
+        if i != 3:
+            print("i={} j={}".format(str(i),j))
+        else:
+            continue
 
 
 
+WHILE
+++++++++++++++++++
+With the while loop we can execute a set of statements as long as a condition is true.
+
+    .. code-block:: Python
+
+    # prompt user for a name until they provide a non-empty string
+    greeting= input("Enter your name>")
+    while not greeting:
+        greeting=input("I said enter your name>")
+
+    # The WHILE loop executes until the exit condition is satistified and the ELSE condition is executed
+    counter = 0
+    while counter < 10:
+        counter +=1
+    else:
+        print("that worked well")
+
+    # The WHILE loop terminates before the exit condition the the statements in the ELSE are not executed
+    counter = 0
+    while counter < 10:
+        counter +=1
+        if counter == 5:
+            break
+    else:
+        print("that worked well")
+
+TRY EXCEPT FINALLY
+++++++++++++++++++++++
+The try block lets you test a block of code for errors. The except block lets you handle the error. The finally block
+lets you execute code, regardless of the result of the try and except blocks.
+
+    .. code-block:: Python
+
+    # Trying to print a variable that doesnt exist will cause an error
+    try:
+        print(no_exist)
+    except:
+        print("no_exist was not defined")
+
+    # a better approach is to handle the specfic exception
+    try:
+        print(no_exist)
+    except NameError:
+        print("no_exist was not defined")
+    except:
+        print('something else happened')
 
 
+    # use Finally to execute cleanup code (e.g. close a file or database connection in the case of an error)
+    import io
 
-
-
-
-
-
-
+    try:
+        f = open("test.txt")
+        f.write("Lorum Ipsum")
+    except io.UnsupportedOperation:
+        print("Something went wrong when writing to the file")
+    finally:
+        f.close()
 
 
 

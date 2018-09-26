@@ -30,7 +30,7 @@ Activities
 .. code-block:: Python
    :caption: Activity 1 - Console input/output
 
-    Crete a script that uses the console to capture some required demographic data about a subject(e.g. id, sex, age, race, ect..). When you have all the information fore a subject, display the
+    Create a script that uses the console to capture some required demographic data about a subject(e.g. id, sex, age, race, ect..). When you have all the information fore a subject, display the
     data on the console in a nicely formatted presentation.
 
     * add some validation to ensure the input is acceptable (e.g. no strings for age, no missing values for sex)

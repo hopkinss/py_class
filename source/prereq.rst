@@ -19,9 +19,12 @@ By 3rd class
 
 Course Outline
 ====================================
-**Location:** TBD   |br|
-**Frequency:** Weekly-Bi weekly, depending on needs of SeaGen |br|
-**Duration:** 4-5 lessons (each lesson may take 2 meetings) for 8-10 weeks, 45 minutes of lesson |br|
+**Location:** TBD
+
+**Frequency:** Weekly-Bi weekly, depending on needs of SeaGen 
+
+**Duration:** 4-5 lessons (each lesson may take 2 meetings) for 8-10 weeks, 45 minutes of lesson 
+
 **Assignments:** Each lesson will have assignments to be completed outside of class. Plan for 3 hours outside for every hour of class
 
 Lesson 01

@@ -33,38 +33,42 @@ Course Outline
 
 Lesson 01
 --------------------
-    #. Variables, code blocks, dynamic types
-    #. Built in data types and their methods
-    #. Program flow control
-    #. Use Mu to write Python code
+#. Variables, code blocks, dynamic types
+#. Built in data types and their methods
+#. Program flow control
+#. Use Mu to write Python code
 
 Lesson 02
 -------------------------
-    #. More on lists, tuples, and dictionaries
-        #. List comprehensions
-        #. Dispatch dictionary
-    #. Defining your own functions
+#. More on lists, tuples, and dictionaries
+
+   - List comprehensions
+   - Dispatch dictionary
+
+#. Defining your own functions
 
 Lesson 03
 ----------------------------
-    #. Use PyCharm to create projects
-    #. Modules
-    #. Reading external data
-        *  CSV
-        *  SAS7BDAT
-    #. Data analysis using Pandas dataframe
-    #. Creating simple reports
+#. Use PyCharm to create projects
+#. Modules
+#. Reading external data
+
+   -  CSV
+   -  SAS7BDAT
+
+#. Data analysis using Pandas dataframe
+#. Creating simple reports
 
 Lesson 04
 ----------------------------
-    #. Introduction to OOP
-    #. Classes
-    #. Initializers
-    #. Instances
-    #. Methods
+#. Introduction to OOP
+#. Classes
+#. Initializers
+#. Instances
+#. Methods
 
 Lesson 05
 ------------------------
-    #. TBD
+#. TBD
 
 

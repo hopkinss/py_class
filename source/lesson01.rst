@@ -3,6 +3,7 @@
 Lesson 01 - Basic Syntax
 ==================================
 
+
 Variables
 --------------------
 An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
@@ -14,7 +15,6 @@ Convention is to use lower case and delimit words in a variable with **_**.
     *  Variable names are case-sensitive (age, Age and AGE are three different variables)
     *  Variables do not need to be declare or typed
     *  Variables can change type after they have been set
-
 
     .. code-block:: Python
 
@@ -29,6 +29,25 @@ Convention is to use lower case and delimit words in a variable with **_**.
         y=int(x)
         y=float(x)
 
+        # You can display the variables with print function or just typing the variable name in ipython
+        print(my_var)
+
+.. csv-table:: Reserved Words
+   :widths: 20,20,20
+
+    "and","False","nonlocal"
+    "as","finally","not"
+    "assert","for","or"
+    "break","from","pass"
+    "class","global","raise"
+    "continue","if","return"
+    "def","import","True"
+    "del","in","try"
+    "elif","is","while"
+    "else","lambda","with"
+    "except","None","yield"
+
+
 Python built-in data types
 +++++++++++++++++++++++++++++
 Python's built-in data types can be grouped into several classes. These are numeric types, sequences, sets and mappings.
@@ -40,7 +59,6 @@ makes sense for that object (e.g. dynamic typing).
    :widths: 20,80
 
     "int"," Integers"
-    "long"," Long integers of non-limited length"
     "float"," Floating-Point numbers"
     "str"," String"
     "list","A mutable ordered sequences of objects"
@@ -48,7 +66,18 @@ makes sense for that object (e.g. dynamic typing).
     "set","An unordered collection of unique objects"
     "dict","A collection of paired items made of a key and a value."
 
+.. code-block:: Python
 
+   # Display and evaluate the type of a variable
+   my_float = 1.1
+   print(type(my_float))
+
+   # Evaluate the type
+   if type(my_float) == float:
+       print("it's a float")
+
+   if isinstance(my_float,float):
+       print("it certainly is a float")
 
 Type conversions
 +++++++++++++++++++++
@@ -72,42 +101,45 @@ The table lists functions available to cast variables into different data types
     "str()","Returns a string version of an object"
     "type()","Returns the type of an object or creates a new type object"
 
+.. code-block:: Python
 
-.. csv-table:: Reserved Words
-   :widths: 20,20,20
+      # Cast into another type'
+      my_str='33.9'
+      my_float=float(my_str)
 
-    "and","False","nonlocal"
-    "as","finally","not"
-    "assert","for","or"
-    "break","from","pass"
-    "class","global","raise"
-    "continue","if","return"
-    "def","import","True"
-    "del","in","try"
-    "elif","is","while"
-    "else","lambda","with"
-    "except","None","yield"
+      # Be aware of types when performing manipulations
+      try:
+          my_val = my_str + 44
+          print(my_val)
+      except TypeError:
+          print("You must cast string to number to do math")
+          my_val = float(my_str) + 44;
+          print(my_val)
+
+
 
 Code blocks
 ---------------------
 Python provides no braces to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line **indentation**, which is rigidly enforced.
-The number of spaces in the indentation is variable (to not use 4 is barbaric), but all statements within the block must be indented the same amount .
+The number of spaces in the indentation is variable (to not use 4 is barbaric), but all statements within the block must be indented the same (or more for nested blocks).
 
 A block code is indicated by using **:** and indenting the associated lines accordingly
 
     .. code-block:: Python
 
-        if var==1:
+        if var>1:
             print("Hi")
-            return true
+
+            if var >100:
+               print("Very hi")
         else:
             print("Bye")
-            return false
+
 
 Operators
 -------------------------
 
-.. csv-table:: Arithmatic Operators
+.. csv-table:: Arithmetic Operators
    :widths: 20,80
 
     "\+","Adds values on either side of the operator."
@@ -117,7 +149,7 @@ Operators
     "%","Divides left hand operand by right hand operand and returns remainder"
     "**","Performs exponential (power) calculation on operators"
     "//","Floor Division - The division of operands where the result is the quotient in which the digits after the decimal point are removed."
-    "+=,-=,/=,*=","[Expression on left] = [self] [operator][expresison on left]  (e.g. increment, decrement)"
+    "+=,-=,/=,*=","[Expression on left] = [self] [operator][expression on left]  (e.g. increment, decrement)"
 
 
 .. csv-table:: Logical Operators
@@ -134,27 +166,42 @@ Operators
     "or, and, not","Boolean"
     "is, is not","Identity"
 
+.. code-block:: Python
+
+   # Evaluate equality
+   a,b=1,1
+   print( a == b)
+
+   # Membership
+   my_list=[1,2,3,4]
+   print(1 in my_list)
+
+   # Identity - does the symbol point to the same object
+   a=None
+   print (a is None)
+
+
 Strings
 ------------------
-Python, unlike the typical implementation of SAS/Base, is an object-oriented language. This implies that everything is an
-object, and as such, can have properties and functions, known as *Methods*. In Python, a string is an object, and has
-methods that correspond to the many string functions is SAS with which you are very
-familiar. The big difference here is the concept that when you call a string method, you are implicitly passing the
-string object on which the method is invoked.
-
+In Python a string is a collection, a sequence of chars. Unlike the implementation of string in SAS/Base, Python string
+is an object. This means it can have properties and functions, known as *Methods*. You will find Python provides
+every string function provided in SAS, and them some. The big difference here is the concept that when you call a
+string method, you are implicitly passing the string object on which the method is invoked.
 
 .. note::
 
-    A big benefit of OOP using an IDE is intellisense. Using the 'dot' notation, the IDE display all the
-    available properties and methods for the object...(more on this in OOP)
+    * Strings are immutable, you cannot update an existing string.
 
-    |intel|
+    * (A big benefit of OOP using an IDE is intellisense. Using the 'dot' notation, the IDE display all the
+      available properties and methods for the object...(more on this in OOP)
+
+      |intel|
 
 
 Python String Methods
 +++++++++++++++++++++++++++++++++++++++
 .. csv-table:: String Methods
-   :header: "Methods", "Descrition","Method", "Description"
+   :header: "Methods", "Description","Method", "Description"
    :widths: 20,80,20,80
 
     "capitalize()","Converts first character to Capital Letter","ljust()","returns left-justified string of given width"
@@ -187,9 +234,12 @@ Examples of calling string functions in Python
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. code-block:: Python
 
-    # Call a string method
+    # Find the position of substring withing a string
     my_string="this is only a test"
     pos=my_string.find('is')
+    print(pos)
+
+    # Capitaliztaion
     new_string=my_string.upper()
 
     # Concatenate strings
@@ -200,7 +250,17 @@ Examples of calling string functions in Python
     item_cost=100.4552423
     y="The price of a {} is {:0.2f}".format(item_name,item_co
 
-    #Substring (remember a string is an immutable collection of characters)
+    # Split a string and take a specific element (e.g. SAS SCAN function)
+    path_var = r'O:\projects\sgn-35\sg035-014\csr\test.sas';
+    print(path_var.split('\\')[-1])
+
+    # Chain functions
+    my_string = "Brentuximab Vedotin"
+    if my_string.lower().startswith("bren"):
+        print('do some things')
+
+
+    #Substring using slice (remember a string is an immutable collection of characters)
     #Slice  [start:end (not inclusive):stride]
     y=my_string[:4]  #  -> this
     y=my_string[5:7] # -> is
@@ -211,38 +271,106 @@ Examples of calling string functions in Python
 
 
 
-Brief introduction to collections
+Introduction to collections
 --------------------------------------------
-In order to make program flow more meaningful, we will briefly introduce collections in Python. There are others, but
-these three sequence data structures provide enough functionality for the foundation.
+In order to make program flow more meaningful, we will introduce collections in Python. There are others, but
+these three sequence data structures provide enough functionality for the foundation. These objects have properties
+and methods for working with themselves.
 
 Lists
 +++++++++++++
-A list is a mutable zero-origin sequence of values of any type, enclosed by [] and delimted by commas.
+A list is a mutable zero-origin sequence of values of any type, enclosed by [] and delimited by commas. Unlike SAS, each
+element can be of a different type, it can even contain other lists. Python provides a comprehensive array of functionality
+to work with lists.
+
+.. csv-table:: List Methods and Built-in Functions
+   :widths: 20,80,20,80
+
+   "Method:  append()","Add Single Element to The List","Function: bool()","Converts a Value to Boolean"
+   "Method:  extend()","Add Elements of a List to Another List","Function: enumerate()","Returns an Enumerate Object"
+   "Method:  insert()","Inserts Element to The List","Function: filter()","constructs iterator from elements which are true"
+   "Method:  remove()","Removes Element from the List","Function: iter()","returns iterator for an object"
+   "Method:  index()","returns smallest index of element in list","Method: () Function","creates list in Function:"
+   "Method:  count()","returns occurrences of element in a list","Function: len()","Returns Length of an Object"
+   "Method:  pop()","Removes Element at Given Index","Function: max()","returns largest element"
+   "Method:  reverse()","Reverses a List","Function: min()","returns smallest element"
+   "Method:  sort()","sorts elements of a list","Function: map()","Applies Function and Returns a List"
+   "Method:  copy()","Returns Shallow Copy of a List","Function: reversed()","returns reversed iterator of a sequence"
+   "Method:  clear()","Removes all Items from the List","Function: slice()","creates a slice object specified by range()"
+   "Function: any()","Checks if any Element of an Iterable is True","Function: sorted()","returns sorted list from a given iterable"
+   "Function: all()","returns true when all elements in iterable is true","Function: sum()","Add items of an Iterable"
+   "Function: ascii()","Returns String Containing Printable Representation","Function: zip()","Returns an Iterator of Tuples"
+
+`List of List methods <https://www.programiz.com/python-programming/methods/list/>`_
 
 .. code-block:: Python
 
-    my_list=[33,'Bob', (1,2,)]
+   # list methods
+   my_list=[1,2,3,4]
+
+   my_list.append(5)
+   my_list.pop()
+   my_list.count(2)
+   my_list.sort() # May require *key* argument or override __lt__ dunder - more on that later
+
+   # built in functions
+   len(my_list)
+   max(my_list)
 
 Tuple
 ++++++++++++
-A tuple is an imutable zero-origin sequence of values of any type, enclosed by () and delimted by commas
+A tuple is an imutable zero-origin sequence of values of any type, enclosed by () and delimited by commas. Tuples are
+very simlar to lists, except they cannot be modified, and
 
 .. code-block:: Python
 
-    my_tuple=(33,'Bob', (1,2,))
+    my_tuple=(33,22,99)
 
 Dictionary
 +++++++++++++++
 A dictionary is collection of key:value pairs, not necessarily in order, and not assesible by a numeric index. The dictionary is enclosed by {},
 key and value elements are delimited by colors, and pairs are delimited by commas
 
+.. csv-table:: Dictionary  Methods and Built-in Functions
+   :widths: 20,80,20,80
+
+   "Method: clear()","Removes all Items","Function: ascii()","Returns String Containing Printable Representation"
+   "Method: copy()","Returns Shallow Copy of a Dictionary","Function: bool()","Converts a Value to Boolean"
+   "Method: fromkeys()","creates dictionary from given sequence","Function: dict()","Creates a Dictionary"
+   "Method: get()","Returns Value of The Key","Function: enumerate()","Returns an Enumerate Object"
+   "Method: items()","returns view of dictionary's (key, value) pair","Function: filter()","constructs iterator from elements which are true"
+   "Method: keys()","Returns View Object of All Keys","Function: iter()","returns iterator for an object"
+   "Method: popitem()","Returns & Removes Element From Dictionary","Function: len()","Returns Length of an Object"
+   "Method: setdefault()","Inserts Key With a Value if Key is not Present","Function: max()","returns largest element"
+   "Method: pop()","removes and returns element having given key","Function: min()","returns smallest element"
+   "Method: values()","returns view of all values in dictionary","Function: map()","Applies Function and Returns a List"
+   "Method: update()","Updates the Dictionary","Function: sorted()","returns sorted list from a given iterable"
+   "Function: any()","Checks if any Element of an Iterable is True","Function: sum()","Add items of an Iterable"
+   "Function: all()","returns true when all elements in iterable is true","Function: zip()","Returns an Iterator of Tuples"
+
+`List of Dictionary methods <https://www.programiz.com/python-programming/methods/dictionary/>`_
+
 .. code-block:: Python
 
-    my_dict={'bob':1, 'jim':2, \
-             'steve':3}
+   # Declare a dictionary
+   my_dict={'bob':1, 'jim':2,'steve':3}
 
-    steves_number=my_dict['steve']
+   # Retieve values by key
+   steves_number = my_dict['steve']
+   steves_number2= my_dict.get('steves','missing') # Get a value with a default if key doesnt exist
+
+   #add/update an item to a dictionary
+   my_dict['wayne']=99
+
+   # Add or uppdate using update method
+   wayne={"wayne":88}
+   bill={'bill':23}
+   my_dict.update(wayne)
+   my_dict.update(bill)
+   print(my_dict)
+
+
+
 
 Program flow control
 -----------------------------
@@ -271,7 +399,7 @@ iterable expression. The FOR statement will execute over each element in the col
 
     .. note::
 
-        More on what makes someting interable later, for now, think any collection (string, list, tuple, dict) is iterable
+        More on what makes something interable later, for now, think any collection (string, list, tuple, dict) is iterable
 
 .. code-block:: Python
 
@@ -307,7 +435,7 @@ WHILE
 ++++++++++++++++++
 With the while loop we can execute a set of statements as long as a condition is true.
 
-    .. code-block:: Python
+.. code-block:: Python
 
     # prompt user for a name until they provide a non-empty string
     greeting= input("Enter your name>")
@@ -335,7 +463,7 @@ TRY EXCEPT FINALLY
 The try block lets you test a block of code for errors. The except block lets you handle the error. The finally block
 lets you execute code, regardless of the result of the try and except blocks.
 
-    .. code-block:: Python
+.. code-block:: Python
 
     # Trying to print a variable that doesnt exist will cause an error
     try:

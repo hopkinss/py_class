@@ -6,7 +6,8 @@ SeaGen Python Class
    :maxdepth: 2
    :caption: Contents:
 
-   Prerequisites <prereq>
+   Introduction <prereq>
    Lesson 01 <lesson01>
+   Assignments <assignments>
 
 

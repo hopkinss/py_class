@@ -7,7 +7,7 @@ Configure your system
 Required for 1st class
 ------------------------
     #. Have a Windows laptop  - eventually you will want to have local admin privs (i can help if you can't), but this is not necessary to start
-    #. Download and install Mu for Windows 64-bit - our IDE for 2 Lessons `Mu <https://codewith.mu/en/download>`_. `Mu` should install without admin privileges and contains its own Python installation, so there are no other dependencies.
+    #. Download and install `Mu <https://codewith.mu/en/download>`_ for Windows 64-bit. It will be our integrated development environment (IDE) for at least two lessons. `Mu` should install without admin privileges and contains its own Python installation, so there are no other dependencies.
 
 By 3rd class
 ----------------------

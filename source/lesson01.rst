@@ -6,15 +6,10 @@ Lesson 01 - Basic Syntax
 
 Variables
 --------------------
-An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
-Convention is to use lower case and delimit words in a variable with **_**.
-
-    *  A variable name must start with a letter or the underscore character
-    *  A variable name cannot start with a number
-    *  A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
-    *  Variable names are case-sensitive (age, Age and AGE are three different variables)
-    *  Variables do not need to be declare or typed
-    *  Variables can change type after they have been set
+*  Not declared and dynamically typed based on the value - type is mutable 
+*  A variable name must start with a letter or the underscore character
+*  Variable names are case-sensitive (age, Age and AGE are three different variables)
+*  Convention is to use lower case and delimit words in a variable with **_** (e.g. subject_age)
 
     .. code-block:: Python
 
@@ -25,9 +20,8 @@ Convention is to use lower case and delimit words in a variable with **_**.
         a,b,c = 1,2,3
 
         # Change the type of a variable
-        x='10'
-        y=int(x)
-        y=float(x)
+        x='10' # is a string 
+        x=1    # now it's an int
 
         # You can display the variables with print function or just typing the variable name in ipython
         print(my_var)
@@ -52,7 +46,7 @@ Python built-in data types
 +++++++++++++++++++++++++++++
 Python's built-in data types can be grouped into several classes. These are numeric types, sequences, sets and mappings.
 Python stores the type of an object with the object, and checks when the operation is performed whether that operation
-makes sense for that object (e.g. dynamic typing).
+makes sense for that object (e.g. dynamic typing). Think of the variable as a drawer and the type is defined by the value contained in the drawer, which can change at any time.
 
 .. csv-table:: Common built-in data types
    :header: "Type ","Description"
@@ -103,7 +97,7 @@ The table lists functions available to cast variables into different data types
 
 .. code-block:: Python
 
-      # Cast into another type'
+      # Cast into another type
       my_str='33.9'
       my_float=float(my_str)
 
@@ -115,7 +109,6 @@ The table lists functions available to cast variables into different data types
           print("You must cast string to number to do math")
           my_val = float(my_str) + 44;
           print(my_val)
-
 
 
 Code blocks

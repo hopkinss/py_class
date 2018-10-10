@@ -9,13 +9,21 @@ activities will be posted to a repo in one of the instructors Github accounts in
 
 Lesson 01
 ----------------------
-Reading
+Preparation
 +++++++++++++
 Get Mu installed before you do anything. Use Python 3 *Create code using standard Python 3*. You can write code in the editor, save the file (make a local folder named 'lesson01') and click run.
 Be sure to click 'Stop' before trying to edit the code again. Another alternative is to use the REPL Python shell in the command bar. This allows you to interactively execute code and observe
 the outcome interactively. With Mu open, click |repl| icon to invoke the REPL for live coding. Submit code interactively and observe the values...
 
     .. image:: /_static/repl.png
+
+
+
+ Readings
+ +++++++++++++++++++++++
+
+`Introduction <https://docs.python.org/3/tutorial/introduction.html>`__
+`Flow Control <https://docs.python.org/3/tutorial/controlflow.html>`__
 
 **Warmup** Go to `CodingBat code practice <https://codingbat.com/python/>`_ . Select some excercises from the following and execute them in th e REPL:
 
@@ -76,11 +84,20 @@ Complete the exercises and push the solutions to your Github :). Be as creative 
         * Extra - display the number of guesses it took the user to arrive at the correct number
 
 
+Lesson 2
+----------------------
+
+Readings
+++++++++++++++++++++
+`Data structures <https://docs.python.org/3/tutorial/datastructures.html>`__
+`Modules <https://docs.python.org/3/tutorial/modules.html>`__
 
 
+Lesson 3
+----------------------
 
 
+Readings
++++++++++++++++++++++
+`External input <https://docs.python.org/3/tutorial/inputoutput.html>`__
 
-Instructor solutions
-+++++++++++++++++++++++++
-<link to repo>

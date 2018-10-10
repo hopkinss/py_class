@@ -60,7 +60,7 @@ Complete the exercises and push the solutions to your Github :). Be as creative 
     Create a program that allows the user to enter as many numbers as they want until the user types **Q**. (see WHILE loop with BREAK). When the user enters **Q**,
      display some statistics about the list. 
 
-     * Optionally read how to import the statistics module into your program and use its methods to calculate statistics
+     * Optionally use the **statistics** module into your program and use its methods to calculate statistics
 
 
 .. code-block:: Python
@@ -76,7 +76,7 @@ Complete the exercises and push the solutions to your Github :). Be as creative 
     :caption: Random number guesser
 
     Create a program that 
-        1) Defines a random number - you will need to import random, see starter code below 
+        1) Defines a random number - you will need to use the **random** module
         2) Continue to ask the user to input an integer until the value is correct 
         3) Alert the user if the guess is too high or low
         3) If the user guesses the correct answer, print a congratulations message, tell the user how many tries it took, and leave the loop 

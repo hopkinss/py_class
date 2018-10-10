@@ -22,8 +22,8 @@ the outcome interactively. With Mu open, click |repl| icon to invoke the REPL fo
 Readings
 +++++++++++++++++++++++
 
-#. `Introduction <https://docs.python.org/3/tutorial/introduction.html>`__ 
-#. `Flow Control <https://docs.python.org/3/tutorial/controlflow.html>`__
+#. `Introduction to Python <https://docs.python.org/3/tutorial/introduction.html>`__ 
+#. `Program flow control <https://docs.python.org/3/tutorial/controlflow.html>`__
 
 **Warmup** Go to `CodingBat code practice <https://codingbat.com/python/>`_ . Select some excercises from the following and execute them in th e REPL:
 
@@ -89,8 +89,8 @@ Lesson 2
 
 Readings
 ++++++++++++++++++++
-#. `Data structures <https://docs.python.org/3/tutorial/datastructures.html>`__
-#. `Modules <https://docs.python.org/3/tutorial/modules.html>`__
+#. `Python data structures <https://docs.python.org/3/tutorial/datastructures.html>`__
+#. `Modules in Python <https://docs.python.org/3/tutorial/modules.html>`__
 
 
 Lesson 3

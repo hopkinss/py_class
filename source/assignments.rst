@@ -17,33 +17,69 @@ the outcome interactively. With Mu open, click |repl| icon to invoke the REPL fo
 
     .. image:: /_static/repl.png
 
-
-Activities
-+++++++++++++
-**Warmup** Go to `CodingBat code practice <https://codingbat.com/python/>`_ . Select some excercises from the following:
+**Warmup** Go to `CodingBat code practice <https://codingbat.com/python/>`_ . Select some excercises from the following and execute them in th e REPL:
 
     * String 2
     * List - 1
     * Logic -1
 
 
-.. code-block:: Python
-   :caption: Activity 1 - Console input/output
+Activities
++++++++++++++
+Complete the exercises and push the solutions to your Github :). Be as creative as you want as these are not requirements, just a guide to get you started.
 
-    Create a script that uses the console to capture some required demographic data about a subject(e.g. id, sex, age, race, ect..). When you have all the information fore a subject, display the
-    data on the console in a nicely formatted presentation.
+
+.. code-block:: Python
+   :caption: Fizz Buzz
+
+    Write a program that prints the numbers from 1 to 100 inclusive.
+
+    1) For multiples of three print **Fizz** instead of the number.
+    2) For the multiples of five print**Buzz** instead of the number.
+    3) For numbers which are multiples of both three and five print **FizzBuzz** instead.
+
+.. code-block:: Python
+    :caption: Number adder
+
+    Create a program that prompts the user for 2 numbers. Display the sum back to the user 
+
+    * Optionally prompt the user for the operand
+    * Create an interesting format for the response
+
+.. code-block:: Python
+    :caption: Statistics on lists of numbers
+
+    Create a program that allows the user to enter as many numbers as they want until the user types **Q**. (see WHILE loop with BREAK). When the user enters **Q**,
+     display some statistics about the list. 
+
+     * Optionally read how to import the statistics module into your program and use its methods to calculate statistics
+
+
+.. code-block:: Python
+   :caption: Store data in a dictionary
+
+    Create a script that uses the console to capture some required demographic data about a subject(e.g. id, sex, age, race, ect..). Store the data in a dictionary.If the user types **print** 
+    then print the contents of the dictionary.
 
     * add some validation to ensure the input is acceptable (e.g. no strings for age, no missing values for sex)
     * take some action if the user fails to reply properly after 3 prompts for correct input
 
 .. code-block:: Python
-   :caption: Activity 2 - Fizz Buzz
+    :caption: Random number guesser
 
-    Write a program that prints the numbers from 1 to 100 inclusive.
+    Create a program that 
+        1) Defines a random number - you will need to import random, see starter code below 
+        2) Continue to ask the user to input an integer until the value is correct 
+        3) If the user guesses the correct answer, print a congratulations message and leave the loop
+        4) Allow the user to leave the loop anytime by typing **Q**
+        
+        * Extra - display the number of guesses it took the user to arrive at the correct number
 
-    * But for multiples of three print **Fizz** instead of the number.
-    * For the multiples of five print**Buzz** instead of the number.
-    * For numbers which are multiples of both three and five print **FizzBuzz** instead.
+
+
+
+
+
 
 Instructor solutions
 +++++++++++++++++++++++++

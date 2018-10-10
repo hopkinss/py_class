@@ -12,11 +12,15 @@ Required for 1st class
         .. note::
             `Mu` should install without admin privileges and contains its own Python installation, so there are no other dependencies.
 
-By 3rd class
+Recommended 
 ----------------------
-    #. Download and install the latest version of Python for Windows (3.7.0) if you dont already have 3.6 or higher `python <https://www.python.org/downloads/>`_
+
     #. Download and install Git Bash for Windows `git <http://www.techoism.com/how-to-install-git-bash-on-windows/>`_
-    #. Create a GitHub account and make a py01 repository `github <https://github.com/join?source=experiment-header-dropdowns-home/>`_
+    #. Create a GitHub account and make a py01 repository `github <https://github.com/join?source=experiment-header-dropdowns-home/>`_            
+
+You'll need admin for this so hold off until we are ready 
+-----------------------------------------------------------------
+    #. Download and install the latest version of Python for Windows (3.7.0) if you dont already have 3.6 or higher `python <https://www.python.org/downloads/>`_
     #. Download and install PyCharm Community Edition - IDE for later in course `PyCharm <https://www.jetbrains.com/pycharm/download/#section=windows/>`_
 
 
@@ -31,35 +35,36 @@ Course Outline
 **Assignments:** 
   Each lesson will have assignments to be completed outside of class. Plan for 3 hours outside for every hour of class
 
-Lesson 01
---------------------
+Lesson 01  - **12-1pm Discovery Bay B7**
+-------------------------------------------
+#. Use Mu to write Python code
 #. Variables, code blocks, dynamic types
 #. Built in data types and their methods
 #. Program flow control
-#. Use Mu to write Python code
 
 Lesson 02
 -------------------------
 #. More on lists, tuples, and dictionaries
-
-   - List comprehensions
-   - Dispatch dictionary
-
+#. Importing modules
 #. Defining your own functions
 
 Lesson 03
 ----------------------------
-#. Use PyCharm to create projects
-#. Modules
+#. More on functions
+#. Formatting strings
 #. Reading external data
 
    -  CSV
    -  SAS7BDAT
-
-#. Data analysis using Pandas dataframe
+#. Dispatch dictonary
 #. Creating simple reports
 
 Lesson 04
+---------------
+#. Data analysis using Pandas dataframe
+#. List comprehensions
+
+Lesson 05
 ----------------------------
 #. Introduction to OOP
 #. Classes
@@ -67,8 +72,5 @@ Lesson 04
 #. Instances
 #. Methods
 
-Lesson 05
-------------------------
-#. TBD
 
 

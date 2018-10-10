@@ -78,10 +78,10 @@ Complete the exercises and push the solutions to your Github :). Be as creative 
     Create a program that 
         1) Defines a random number - you will need to import random, see starter code below 
         2) Continue to ask the user to input an integer until the value is correct 
-        3) If the user guesses the correct answer, print a congratulations message and leave the loop
+        3) Alert the user if the guess is too high or low
+        3) If the user guesses the correct answer, print a congratulations message, tell the user how many tries it took, and leave the loop 
         4) Allow the user to leave the loop anytime by typing **Q**
-        
-        * Extra - display the number of guesses it took the user to arrive at the correct number
+
 
 
 Lesson 2

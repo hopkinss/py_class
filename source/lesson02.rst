@@ -90,7 +90,7 @@ Our first function return a string, which we can print to the console.
 
 .. code-block:: Python
 
-    def hello_world:
+    def hello_world():
         return "Hello world"
 
 Nothing happens until you call the function, very similar to a SAS macro
@@ -99,20 +99,37 @@ Nothing happens until you call the function, very similar to a SAS macro
 
     print(hello_world())
 
-Function parameters
------------------------------
-Functions accepts parameters much the same way as a SAS macro, positional or named (e.g. keyword). Named parameters can have default values. Parameters can also be collections of 
-an unknown type or number of arguments e.g.  the *args and **kwargs convention.
+Input parameters and return values
+--------------------------------------------
+Functions accepts parameters much the same way as a SAS macro, positional or named (e.g. keyword). The type of the parameter is dynamic, depending on the value provided. 
+
+All functions return a value, even if that value is None (default). Functions can return a single value, or a tuple of values.
+
 
     .. code-block:: Python
 
-        # a single string
-        def my_func(arg1):
-            return f"hello {arg1}"
+        # Accept a string and return a string
+        def my_func(world):
+            return f"hello {world}"
 
         print(my_func('cruel world'))
 
-        # dynamic types
+        # accept an int  (how can we ensure the value is of the type expected?)
+        def my_func(val):
+            return val**2
+
+        # Return multiple results as a tuple (how can we access the desired result)
+        def my_func(nums):
+            r_sum = sum(nums)
+            r_avg = sum(nums) / len(nums)
+            r_max = max(nums)
+            return r_sum, r_avg, r_max
+
+
+        my_var = my_func((3,4,5))
+
+
+        #Parameter types are dynamic, just like any Python variable
         def my_func(arg1, arg2):
 
             arg_list = [arg1,arg2]
@@ -127,17 +144,31 @@ an unknown type or number of arguments e.g.  the *args and **kwargs convention.
 
         my_func([1,2,3,],"Hi")
 
-        # accept *n* positional arguments
-        def my_func(*args):
 
-            counter = 0
-            for i in args:
-                counter += 1
-                print(f"{counter}) {i} is the number {counter} argument of type {type(i)}")
+        # Specify arguments by either position or name
+        def my_func(arg1,arg2):
+            return arg1 - arg2
 
-        my_func('junk', 1, [1,2,3],('a','b','c') )
+        print(my_func(1,7))
+        print(my_func(arg2=1,arg1=7))
 
-        
+        # Provide default values 
+        def my_func(arg1,arg2=10):
+            return arg1 - arg2
+
+        print(my_func(20))
+
+    .. note:: 
+
+        Non-default arguments must follow default arguments
+
+            
+    
+
+
+
+
+
 
 
 

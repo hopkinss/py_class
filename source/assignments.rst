@@ -93,6 +93,23 @@ Readings
 #. `Modules in Python <https://docs.python.org/3/tutorial/modules.html>`__
 
 
+Activities
++++++++++++++
+
+.. code-block:: Python
+   :caption: Convert fizz-buzz to a function 
+
+    Create a function that accepts a single integer and return that number's fizzBuzz status based on the orginal logic
+
+    1) For multiples of three print **Fizz** instead of the number.
+    2) For the multiples of five print**Buzz** instead of the number.
+    3) For numbers which are multiples of both three and five print **FizzBuzz** instead.
+
+Get Python 3.7 and PyCharm Community installed (you will need help from IT if you are not a local admin)
+
+
+
+
 Lesson 3
 ----------------------
 

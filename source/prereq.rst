@@ -35,27 +35,66 @@ Course Outline
 **Assignments:** 
   Each lesson will have assignments to be completed outside of class. Plan for 3 hours outside for every hour of class
 
-Lesson 01  - **12-1pm Discovery Bay B7**
+Lesson 01  
 -------------------------------------------
-#. Use Mu to write Python code
-#. Variables, code blocks, dynamic types
-#. Built in data types and their methods
-#. Program flow control
+
+Session 01
++++++++++++++++++++++
+  #. Use Mu to write Python code
+  #. Variables, code blocks, dynamic types
+  #. Built in data types and their methods
+  #. Program flow control
+
+Session 02
++++++++++++++++++++++
+  #. Formatting strings
+
+    * Format()    
+    * Interpolation "f-string"
+    * join() 
+
+  #. Lists
+
+    * Methods
+
+      * append
+      * extend
+      * index
+      * insert
+      * reverse
+      * sort
+
+    * FOR loops
+    * enumerate() function
+    * range() function
+    * try except finally
+
+  #. Dictionaries
+
+    * Creating a dictonary  - keys and values
+    * Add and get items
+    * Methods
+
+      * get()
+      * item()
+      * keys()
+      * values()
+      * any()
 
 Lesson 02
 -------------------------
-#. More on lists, tuples, and dictionaries
 #. Importing modules
 #. Defining your own functions
 
 Lesson 03
 ----------------------------
 #. More on functions
-#. Formatting strings
+#. 
 #. Reading external data
 
    -  CSV
    -  SAS7BDAT
+   
 #. Dispatch dictonary
 #. Creating simple reports
 

@@ -262,7 +262,38 @@ Examples of calling string functions in Python
     y=my_string[-4:] # ->test
     y=my_string[::2] # -> ti sol  et
 
+String formatting 
+------------------------------
+#. Format() method - allows replacement by index in the string expression. (`Number format examples <https://mkaz.blog/code/python-string-format-cookbook/>`__)
 
+    .. code-block:: Python
+
+        fruit1 = "orange"
+        fruit2= "apple"
+
+        var1="My favorite fruit is an {}, but {} is good too".format(fruit1,fruit2)
+
+        # Python number formatting 
+        i=99
+
+
+
+
+#. String interpolation **f-string** - embed Python expressions inside of string contstants.  
+
+    .. code-block:: Python
+
+        var1 = f"you can't compare an \"{fruit1}\" to an \"{fruit2}\""
+
+        var2 = (f"{','.join(map(str.upper,['bill','joe','steve']))}")
+
+#. Python number formatting 
+
+    i=99
+    print("{:0>6d}".format(i))
+
+
+       
 
 Introduction to collections
 --------------------------------------------
@@ -293,6 +324,8 @@ to work with lists.
    "Function: any()","Checks if any Element of an Iterable is True","Function: sorted()","returns sorted list from a given iterable"
    "Function: all()","returns true when all elements in iterable is true","Function: sum()","Add items of an Iterable"
    "Function: ascii()","Returns String Containing Printable Representation","Function: zip()","Returns an Iterator of Tuples"
+   "Function: map","Returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)"
+
 
 `List of List methods <https://www.programiz.com/python-programming/methods/list/>`_
 
@@ -310,6 +343,15 @@ to work with lists.
    len(my_list)
    max(my_list)
 
+   # useful list functions
+    my_list = ['a','b','c']
+    my_var = ','.join(my_list);
+    print(my_var)
+
+    my_var = ','.join(map(str.upper,my_list));
+    print(my_var)
+
+
 Tuple
 ++++++++++++
 A tuple is an imutable zero-origin sequence of values of any type, enclosed by () and delimited by commas. Tuples are
@@ -322,7 +364,18 @@ very simlar to lists, except they cannot be modified, and
 Dictionary
 +++++++++++++++
 A dictionary is collection of key:value pairs, not necessarily in order, and not assesible by a numeric index. The dictionary is enclosed by {},
-key and value elements are delimited by colors, and pairs are delimited by commas
+key and value elements are delimited by colors, and pairs are delimited by commas. Keys must be immutable data types (int, strings, tuples) 
+
+Dictionaries and lists share the following characteristics:
+
+    * Both are mutable.
+    * Both are dynamic. They can grow and shrink as needed.
+    * Both can be nested. A list can contain another list. A dictionary can contain another dictionary. A dictionary can also contain a list, and vice versa.
+
+Dictionaries differ from lists primarily in how elements are accessed:
+
+    * List elements are accessed by their position in the list, via indexing.
+    * Dictionary elements are accessed via keys.
 
 .. csv-table:: Dictionary  Methods and Built-in Functions
    :widths: 20,80,20,80
@@ -363,12 +416,10 @@ key and value elements are delimited by colors, and pairs are delimited by comma
    print(my_dict)
 
 
-
-
 Program flow control
 -----------------------------
 Python, like SAS, has a concept of "truthy" in that an expression evaluates to True if not None, False, 0 (int,
-float, or complex), or an empty sequence (e.g. my_empty_list=[] is Falsey)
+float, or complex), or an empty sequence (e.g. my_empty_list=[] is Falsey). 
 
 
 IF, ELIF, ELSE

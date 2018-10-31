@@ -119,7 +119,7 @@ In-class activities
 
 Homework
 ++++++++++++++++++
-#. Download ` class.csv <https://gist.github.com/hopkinss/d353bce89600ed1bd1004c86d33c69d6>`__ to your Mu_code folder (C:\Users\[your name]\mu_code) 
+#. Download the content from the lesson 3 repository `Lesson 03 <https://github.com/hopkinss/answers/tree/master/lesson03>`__  to your Mu_code folder (C:\Users\[your name]\mu_code) 
 #. Create a function that reads the data in class.csv and stores it in a dictionary. 
 #. Creat another function that will display the details for a student when provided the students name
 #. I will post a simple solution. Use it only for ideas - try to do the work on your own. 
@@ -129,5 +129,5 @@ Homework
 
 Readings
 +++++++++++++++++++++
-#. `External input <https://docs.python.org/3/tutorial/inputoutput.html>`__
+#. `CSV file reading and writing <https://realpython.com/python-csv/>`__
 

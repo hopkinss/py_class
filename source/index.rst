@@ -9,6 +9,7 @@ SeaGen Python Class
    Introduction <prereq>
    Lesson 01 <lesson01>
    Lesson 02 <lesson02>
+   Lesson 03 <lesson03>
    Assignments <assignments>
 
 

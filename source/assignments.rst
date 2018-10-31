@@ -112,6 +112,19 @@ Get Python 3.7 and PyCharm Community installed (you will need help from IT if yo
 
 Lesson 3
 ----------------------
+In-class activities
++++++++++++++++++++++++++++
+#. Complete dictionary assignment if you havent already
+#. Turn your dictionary assignment into a function 
+
+Homework
+++++++++++++++++++
+#. Download ` class.csv <https://gist.github.com/hopkinss/d353bce89600ed1bd1004c86d33c69d6>`__ to your Mu_code folder (C:\Users\[your name]\mu_code) 
+#. Create a function that reads the data in class.csv and stores it in a dictionary. 
+#. Creat another function that will display the details for a student when provided the students name
+#. I will post a simple solution. Use it only for ideas - try to do the work on your own. 
+#. Expand on the solution by displaying available students, formatting the output, or maybe even creating an output file.
+
 
 
 Readings
